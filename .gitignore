@@ -12,5 +12,4 @@
 
 # Docker
 .dockerignore
-Dockerfile
 .tests.dockerfile
