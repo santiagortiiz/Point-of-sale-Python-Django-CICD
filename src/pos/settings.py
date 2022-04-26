@@ -85,6 +85,14 @@ WSGI_APPLICATION = 'pos.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'point-of-sales',
+        'USER': 'root',
+        'PASSWORD': 'r00t',
+        'HOST': 'localhost',
+        'PORT': '3306'
+    },
+    'sqlite': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3'
     }

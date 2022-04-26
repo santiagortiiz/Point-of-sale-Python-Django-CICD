@@ -1,6 +1,5 @@
 # syntax=docker/dockerfile:1
 
-# Tests image
 FROM python:3.8-slim-buster
 
 RUN apt update
@@ -10,6 +9,13 @@ RUN apt-get install procps -y
 RUN apt install curl -y
 RUN apt install net-tools -y
 
+# Package needed for mysql interface to execute mysql_config command
+RUN apt-get install -y default-libmysqlclient-dev
+
+# Install required system libs
+RUN apt-get install -y gcc
+
+# Install server-side dependencies
 WORKDIR /home/pos
 
 COPY requirements.txt ./.
