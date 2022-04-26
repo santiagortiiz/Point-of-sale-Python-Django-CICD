@@ -89,7 +89,7 @@ DATABASES = {
         'NAME': 'point-of-sales',
         'USER': 'root',
         'PASSWORD': 'r00t',
-        'HOST': 'localhost',
+        'HOST': 'mysqldb',
         'PORT': '3306'
     },
     'sqlite': {
