@@ -2,7 +2,7 @@
 from rest_framework import mixins, viewsets, filters
 
 # Permissions
-from rest_framework.permissions import AllowAny
+from .permissions import InventoryPolicy
 
 # Models
 from modules.inventory.models import Product
@@ -24,7 +24,7 @@ class ProductViewSet(mixins.CreateModelMixin,
         - Search a product by a text contained in the description.
     '''
 
-    permission_classes = [AllowAny]
+    permission_classes = (InventoryPolicy,)
     queryset = Product.objects.filter(active=True)
     serializer_class = ProductModelSerializer
     filter_backends = [filters.SearchFilter]
