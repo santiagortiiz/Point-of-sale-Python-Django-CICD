@@ -1,6 +1,9 @@
 # Virtual environment
 .venv/
 
+# Secrets
+.env
+
 # Cache
 *.pyc
 
@@ -9,6 +12,7 @@
 
 # Databases
 *.sqlite3
+databases/
 
 # Docker
 .dockerignore

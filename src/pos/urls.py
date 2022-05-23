@@ -24,4 +24,5 @@ urlpatterns = [
     # APIs
     path('api/', include(('modules.inventory.urls', 'inventory'), namespace='inventory-api')),
     path('api/', include(('modules.orders.urls', 'orders'), namespace='orders-api')),
+    path('api/', include(('modules.users.urls', 'users'), namespace='users-api')),
 ]
