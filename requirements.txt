@@ -6,3 +6,8 @@ djangorestframework>=3.12,<3.13
 
 # Databases
 # mysqlclient
+psycopg2
+
+# DRF
+djangorestframework-simplejwt
+drf-access-policy
